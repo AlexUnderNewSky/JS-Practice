@@ -1,0 +1,18 @@
+body{
+    background-color: lightgrey;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 70px;
+}
+
+.mainTextColor1{
+    color: yellow;
+}
+.mainTextColor2{
+    color: #c75a00;
+}
