@@ -1,0 +1,98 @@
+body{
+    background-color: #00a0a0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 70px;
+    text-shadow: 1px 1px black;
+}
+
+.mainTextColor1{
+    color: yellow;
+}
+.mainTextColor2{
+    color: #c75a00;
+}
+form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Стили для полей ввода */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на поля */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #66b2ff;
+    box-shadow: 0 0 5px rgba(102, 178, 255, 0.5);
+}
+
+/* Стили для кнопок */
+form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Стиль для кнопки генерации пароля */
+form .random-password {
+    background-color: #ff9900;
+}
+
+/* Стиль для кнопки отправки */
+form .send {
+    background-color: #4CAF50;
+}
+
+/* Эффекты при наведении на кнопки */
+form button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+form button:active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Эффект при наведении на каждую из кнопок */
+form .random-password:hover {
+    background-color: #e68a00;
+}
+
+form .send:hover {
+    background-color: #45a049;
+}
+
+/* Дополнительные стили для кнопки генерации пароля */
+form .random-password {
+    display: block;
+    margin-top: -5px;
+}
