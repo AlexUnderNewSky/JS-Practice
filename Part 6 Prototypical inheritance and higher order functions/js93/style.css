@@ -1,0 +1,24 @@
+body {
+    background-color: #26e9e9;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 70px;
+    text-shadow: 1.5px 1.5px black;
+  }
+  
+  .mainTextColor1 {
+    color: yellow;
+  }
+  .mainTextColor2 {
+    color: #c75a00;
+  }
+  .mainTextColor3 {
+    color: mediumvioletred;
+  }
+  
