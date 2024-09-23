@@ -25,7 +25,7 @@ function fn4() {
   d1.textContent = `${hours}:${minutes}:${seconds}`;
   console.log(`${hours}:${minutes}:${seconds}`);
 }
-fn4();
+// setInterval(fn4, 1);
 
 const num = `9`;
 
