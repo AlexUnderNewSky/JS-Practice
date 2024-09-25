@@ -1,0 +1,40 @@
+body {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+h1 {
+  color: yellow;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  /* background-color: rgb(red, green, blue); */
+}
+
+input {
+  padding: 10px 30px;
+  font-size: 25px;
+}
+
+.color-blue {
+  background-color: white;
+  color: blue;
+  padding: 10px 20px;
+}
+
+.btn,
+.add {
+  display: block;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 30px;
+}
