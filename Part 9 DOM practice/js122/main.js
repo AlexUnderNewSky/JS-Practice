@@ -5,17 +5,62 @@
 */
 "use strict";
 
-// const userElement = document.querySelector(`.user`);
-// console.log(userElement.dataset);
-// console.log(userElement.dataset.name);
+const btnModalOpen = document.querySelector(`.btn`);
+const modal = document.querySelector(`.modal`);
+const modalClose = document.querySelectorAll(`.modal__close`);
+const overlay = document.querySelector(`.overlay`);
+const img = document.querySelector(`.img`);
 
-// const myAge = userElement.dataset.age;
-// console.log(myAge);
+function delTab() {
+  const focus = document.querySelectorAll(
+    `button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])`
+  );
 
-const btn = document.querySelector(`.btn`);
+  focus.forEach((element) => {
+    if (!modal.contains(element)) {
+      element.setAttribute(`tabindex`, `-1`);
+    }
+  });
+}
 
-const parent = btn.closest(`.d1`);
+console.log(`=-=-=-=-=-=-=-=-=-=`);
 
-parent.addEventListener(`click`, () => {
-  console.log(`Clicked on parent with class - d1`);
+const modalOpen = () => {
+  modal.classList.remove(`hidden`);
+  overlay.classList.remove(`hidden`);
+  delTab();
+};
+
+function closeModal() {
+  modal.classList.add(`hidden`);
+  overlay.classList.add(`hidden`);
+}
+
+btnModalOpen.addEventListener(`click`, modalOpen);
+
+modalClose.forEach((val) => {
+  val.addEventListener(`click`, () => {
+    closeModal();
+  });
 });
+
+overlay.addEventListener(`click`, () => {
+  closeModal();
+});
+
+document.addEventListener(`keydown`, function (event) {
+  if (event.key === `Escape`) {
+    closeModal();
+  }
+});
+
+//random image
+function randomNumber() {
+  const num = Math.trunc(Math.random() * (700 - 600) + 1) + 600;
+  console.log(num);
+  img.setAttribute(`src`, `https://picsum.photos/${num}`);
+}
+
+document
+  .querySelector(`.modal__btn-random`)
+  .addEventListener(`click`, randomNumber);
