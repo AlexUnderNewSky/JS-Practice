@@ -16,7 +16,7 @@ function linksAnimation(e) {
     links.forEach((el) => {
       el.style.opacity = this;
     });
-    logo.style.opacity = this; // Можно убрать, что бы логотип не затуманивался
+    // logo.style.opacity = this; // Можно убрать, что бы логотип не затуманивался
     header.classList.toggle(`head`);
     targetLink.style.opacity = 1;
   }
